@@ -1,0 +1,42 @@
+### uml-1 ###
+
+```plantuml
+@startuml
+
+participant 应用
+participant DFS
+participant tmpfs
+
+应用->DFS: dfs_init()\n初始化虚拟文件系统
+tmpfs->tmpfs: dfs_tmpfs_init()\n自动初始化临时文件系统
+tmpfs-->DFS: dfs_register()\n注册tmpfs到DFS
+
+应用->DFS: dfs_mount()\n挂载文件系统
+DFS->tmpfs: ops：mount()\n挂载临时文件系统
+
+应用->DFS: 其他操作，如：\n卸载文件系统、\n查看文件系统状态等
+DFS->tmpfs: ops：...
+
+@enduml
+```
+
+
+### uml-file ###
+
+```plantuml
+@startuml
+
+应用->POSIX: open()\n打开文件
+POSIX->DFS: dfs_file_open()
+DFS->tmpfs: ops：open()
+
+应用->POSIX: read()\n打开文件
+POSIX->DFS: dfs_file_read()
+DFS->tmpfs: ops：read()
+
+应用->POSIX: 其他文件操作...
+POSIX->DFS: ...
+DFS->tmpfs: ops：...
+
+@enduml
+```

@@ -1,0 +1,28 @@
+# https://sequencediagram.org/
+
+participant ping
+participant channel
+participant shm
+participant pong
+
+pong->>channel:rt_channel_recv
+abox over ping,pong#yellow:ping/pong流程
+activate ping
+ping->>shm:lwp_shmget
+shm-->>ping:return shmid
+ping->>shm:lwp_shmat
+shm-->>ping:return shm
+ping->>ping:prepare_data
+ping->>shm:lwp_shmdt
+ping->>channel:rt_channel_send_recv
+activate pong
+deactivate ping
+channel-->>pong:recved_shmid
+pong->>shm:lwp_shmat
+shm-->>pong:return shm
+pong->>pong:handle data
+pong->>shm:lwp_shmdt
+pong->>channel:rt_channel_reply
+deactivate pong
+channel-->>ping:recved_reply
+ping->>shm:lwp_shmrm

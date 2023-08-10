@@ -5,10 +5,6 @@
   - [:cn: 中文](/) -->
 
 
-* [新手指导](/other/novice-guide/README.md)
-* [标准版本](/rt-thread-version/rt-thread-standard/README.md)
-* [Nano 版本](/rt-thread-version/rt-thread-nano/an0038-nano-introduction.md)
-* [Smart 版本](/rt-thread-version/rt-thread-smart/introduction/rt-smart-intro/rt-smart-intro.md)
-* [开发工具](/development-tools/rtthread-studio/README.md)
-
+* [开发板及模块](/hardware/spark1/spark1.md)
+* [资料下载](/document/sample-list/sample-list.md)
 

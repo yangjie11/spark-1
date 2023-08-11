@@ -7,18 +7,21 @@
 1. 增加例程
 
 ```
+- [add] 01_kernel
 - [add] 06_demo_factory
+- [add] 06_demo_nes_simulator
 ```
 
 2. 修改 03_driver_lcd 例程不显示问题
+2. 修改 05_iot_cloud_ali_iotkit 中软件包在 MDK 上的编译问题
 3. 修改 MDK 模板工程，将默认下载算法更改为 ST-LINK
+4. docs 增加内核学习手册及内核相关 pdf 文件，更新星火1号用户手册
 
 ## V0.2.0
 
 1. 按照模块更新编号并增加例程
 
 ```
-- [add] 01_kernel
 -       02_basic_ir
 -       02_basic_irq_beep
 -       02_basic_key
@@ -58,6 +61,8 @@
 - MyWebServer.zip
 - ota_packager.zip
 ```
+
+3. docs 增加：原理图、星火1号用户手册。
 
 ## V0.1.0
 

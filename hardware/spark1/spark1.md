@@ -36,16 +36,8 @@
 
 支持的 IDE：RT-Thread Studio、MDK。
 
-## 资料
 
-- <a href="./hardware/spark1/bom.html" target="_blank">星火 1 号学习板点位 BOM</a>
-- <a href="./hardware/spark1/SCH_Spark-1_V1_0.pdf" target="_blank">星火 1 号开发板原理图</a>
-- 开发板例程兼容《嵌入式实时操作系统：RT-Thread 设计与实现》（[JD 购买链接](https://item.m.jd.com/product/12552882.html?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&utm_user=plusmember&gx=RnExkjVePGLQmdQUro12X0KR3ic8nNc)），可以参考学习
-
-    ![BOOK](figures/book.png)
-
-
-## 使用
+## 如何使用
 
 ### 在 RT-Thread Studio 上使用
 
